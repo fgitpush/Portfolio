@@ -1,0 +1,111 @@
+/* reset, normalize styles */
+h1,h2,ul,ol,li,a,img,section,header,footer,aside,hgroup,nav {padding:0;margin:0;}
+section, header, footer, hgroup, nav, aside {display:block;} /* for firefox */
+address {font-style:normal;}
+img {border:none;}
+h1,h2,h3 {font-weight:normal;}
+h3 {font-size:26px;}
+a,abbr {text-decoration:none;}
+li {list-style-type:none;}
+/* -- */
+
+@font-face {
+	font-family:site;
+	src:url(regular.otf);
+}
+@font-face {
+	font-family:site;
+	font-weight:bold;
+	src:url(bold.otf);
+}
+
+body {
+	font-family:"ScalaSansPro",site,"Lucida Grande",Corbel,sans-serif;
+	background-color:#fff;
+	text-align:center;
+	font-size:16px;
+	font-variant-numeric: oldstyle-nums proportional-nums;
+}
+#page {margin:0 auto;text-align:left;width:718px;}
+body {color:#454545;}
+h1, h2 {text-transform:lowercase;}
+a,a:visited {color:#a1462a;}
+a:hover {color:#808080;}
+header { padding-top:20px; }
+footer {
+	height:20px;
+	visibility:hidden;
+	clear:both;
+}
+hgroup h1 {
+	/*float:left;*/
+	display:inline;
+	border-right:1px dotted #a6a6a6;
+	padding-right:10px;
+	margin-right:10px;
+	margin-left:-2px;
+	font-family:"Droid Sans","ScalaSansPro",site,"Lucida Grande",Corbel,sans-serif;;
+	font-size:1.8em;
+	color:#a1462a;
+	/*text-shadow:2px 2px 2px #aaa;*/
+}
+hgroup h2 {
+	padding-top:17px;
+	display:inline;
+	font-size:1.2em;
+	text-transform:lowercase;
+	/*text-shadow:1px 1px 1px #aaa;*/
+	position:relative;
+	top:-1px;
+}
+address {
+	float:right;
+	text-align:right;
+	padding-top:13px;
+}
+address a {display:block; color:#454545;}
+#content ul {list-style-position:inside;}
+#content li {list-style-type:disc;}
+
+header nav { 
+	font-size:1.2em;
+	font-variant:small-caps;
+	/*font-weight: bold;*/
+	clear:both;
+	float:left;
+	margin:30px 0;
+}
+header nav li {display:inline-block; letter-spacing:.1em; text-transform:lowercase;}
+header nav li:before {content:'‧';padding:0 .25em;}
+header nav li:first-child:before {content:'';padding:0;}
+header nav li a {font-weight: bold;}
+section { clear:left; }
+
+
+
+/*:depends shared*/
+section {float:left; width:738px;} /* this lets the tiles fit within the page bounds, even though they have right margin that would overflow the bounds */
+section a, section a:visited {color:#808080;}
+section li {
+	background-color:#ebebeb;
+	margin-bottom:18px;
+	margin-right:18px;
+	float:left;
+}
+#index a {
+ 	display:block;
+	padding:10px;
+	-moz-transition-property: background-color, color;
+  	-webkit-transition-property: background-color, color;
+  	-o-transition-property: background-color, color;  
+	transition-property: background-color, color;
+  	-moz-transition-duration: .5s;
+  	-webkit-transition-duration: .5s;
+  	-o-transition-duration: .5s;
+	transition-duration:.5s
+}
+#index img {
+	min-width:206px; min-height:206px; display:block; border:1px solid #aaa; margin-bottom:10px;
+}
+section a:hover { background-color:#a1462a; color:#fff;}
+
